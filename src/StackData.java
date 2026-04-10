@@ -1,4 +1,4 @@
-public class QueueData implements LimitedSpaceDataStructure{
+public class StackData implements LimitedSpaceDataStructure{
     Object[] objects = new Object[100];
     int objNum = 0;
     int objectsAmount = 0;
@@ -7,6 +7,7 @@ public class QueueData implements LimitedSpaceDataStructure{
     public boolean put(Object obj) {
         if (objectsAmount < 100) {
             objects[objectsAmount] = obj;
+            objNum = objectsAmount;
             objectsAmount++;
             return true;
         }
@@ -17,9 +18,9 @@ public class QueueData implements LimitedSpaceDataStructure{
 
     @Override
     public Object get() {
-        if (objNum < 100) {
+        if (objNum > -1) {
             Object obj = objects[objNum];
-            objNum++;
+            objNum--;
             return obj;
         } else {
             return null;
