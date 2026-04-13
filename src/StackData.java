@@ -21,6 +21,10 @@ public class StackData implements LimitedSpaceDataStructure{
         if (objNum > -1) {
             Object obj = objects[objNum];
             objNum--;
+            if (objNum == 0) {
+                objectsAmount = 0;
+                objNum = 0;
+            }
             return obj;
         } else {
             return null;

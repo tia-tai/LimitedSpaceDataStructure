@@ -1,33 +1,52 @@
 public class Main {
     public static void main(String[] args) {
-        QueueData animalQueue = new QueueData();
-        String animal1 = "Dog";
-        String animal2 = "Cat";
-        String animal3 = "Giraffe";
+        QueueData queue = new QueueData();
 
-        for (int i = 0; i < 34; i = i + 1) {
-            System.out.println(animalQueue.put(animal1));
-            System.out.println(animalQueue.put(animal2));
-            System.out.println(animalQueue.put(animal3));
+        for (int i = 0; i < 200; i = i + 1) {
+            System.out.println(queue.put(i));
+        }
+        for (int i = 0; i < 200; i = i + 1) {
+            System.out.println(queue.get());
         }
 
-        for (int i = 0; i < 34; i = i + 1) {
-            System.out.println(animalQueue.get());
-            System.out.println(animalQueue.get());
-            System.out.println(animalQueue.get());
+       // for (int i = 0; i < 200; i = i + 1) {
+        //    System.out.println(queue.get());
+        //}
+
+        /*
+        for (int i = 100; i < 150; i = i + 1) {
+            System.out.println(queue.put(i));
         }
 
-        StackData animalStack = new StackData();
-        for (int i = 0; i < 34; i = i + 1) {
-            System.out.println(animalStack.put(animal1));
-            System.out.println(animalStack.put(animal2));
-            System.out.println(animalStack.put(animal3));
+        for (int i = 50; i < 150; i = i + 1) {
+            System.out.println(queue.get());
         }
 
-        for (int i = 0; i < 34; i = i + 1) {
-            System.out.println(animalStack.get());
-            System.out.println(animalStack.get());
-            System.out.println(animalStack.get());
+        StackData stack = new StackData();
+        for (int i = 0; i < 100; i = i + 1) {
+            System.out.println(stack.put(i));
         }
+
+        for (int i = 0; i < 100; i = i + 1) {
+            System.out.println(stack.get());
+        }
+
+        for (int i = 100; i < 200; i = i + 1) {
+            System.out.println(stack.put(i));
+        }
+
+        for (int i = 100; i < 200; i = i + 1) {
+            System.out.println(stack.get());
+        }
+
+        for (int i = 200; i < 300; i = i + 1) {
+            System.out.println(stack.put(i));
+        }
+
+        for (int i = 200; i < 300; i = i + 1) {
+            System.out.println(stack.get());
+        }
+
+         */
     }
 }
