@@ -1,13 +1,30 @@
 public class Main {
     public static void main(String[] args) {
-        QueueData queue = new QueueData();
+//        QueueData queue = new QueueData();
+//
+//        for (int i = 0; i < 200; i = i + 1) {
+//            System.out.println(queue.put(i));
+//        }
+//        for (int i = 0; i < 200; i = i + 1) {
+//            System.out.println(queue.get());
+//        }
 
-        for (int i = 0; i < 200; i = i + 1) {
-            System.out.println(queue.put(i));
+        QueueStackData queueStackData = new QueueStackData();
+
+        for (int i = 0; i < 100; i++) {
+            System.out.println(queueStackData.put(i));
         }
-        for (int i = 0; i < 200; i = i + 1) {
-            System.out.println(queue.get());
+
+        for (int i = 0; i < 100; i++) {
+            System.out.println(queueStackData.get());
         }
+
+        queueStackData.switchStructure();
+
+        for (int i = 0; i < 100; i++) {
+            System.out.println(queueStackData.get());
+        }
+
 
        // for (int i = 0; i < 200; i = i + 1) {
         //    System.out.println(queue.get());

@@ -1,15 +1,15 @@
 public class StackData implements LimitedSpaceDataStructure{
     Object[] objects = new Object[100];
-    int objNum = 0;
+    int objNum = -1;
 
     @Override
     public boolean put(Object obj) {
-        if (objNum == 100) {
+        if (objNum == 99) {
             return false;
         }
 
-        objects[objNum] = obj;
         objNum++;
+        objects[objNum] = obj;
 
         return true;
     }
