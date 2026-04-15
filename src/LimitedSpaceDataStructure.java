@@ -5,4 +5,6 @@ public interface LimitedSpaceDataStructure {
     // Methods
     boolean put(Object obj);
     Object get();
+
+    Object get(boolean increment);
 }

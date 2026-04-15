@@ -3,13 +3,23 @@ public class Main {
         QueueData queue = new QueueData();
 
         Getter getter  = new Getter(queue);
+        Getter getter2  = new Getter(queue);
+        Getter getter3  = new Getter(queue);
         Putter putter = new Putter(queue);
 
         Thread putterThread = new Thread(putter);
+        Thread putter2Thread =  new Thread(putter);
+        Thread putter3Thread =  new Thread(putter);
         Thread getterThread = new Thread(getter);
+        Thread getter2Thread = new Thread(getter2);
+        Thread getter3Thread = new Thread(getter3);
 
         putterThread.start();
+        putter2Thread.start();
+        putter3Thread.start();
         getterThread.start();
+        getter2Thread.start();
+        getter3Thread.start();
 
 //        for (int i = 0; i < 200; i = i + 1) {
 //            System.out.println(queue.put(i));

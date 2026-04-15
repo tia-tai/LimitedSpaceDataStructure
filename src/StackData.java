@@ -25,4 +25,9 @@ public class StackData implements LimitedSpaceDataStructure{
 
         return obj;
     }
+
+    @Override
+    public Object get(boolean increment) {
+        return null;
+    }
 }

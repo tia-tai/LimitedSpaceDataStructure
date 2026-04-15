@@ -18,6 +18,11 @@ public class QueueStackData implements LimitedSpaceDataStructure{
         }
     }
 
+    @Override
+    public Object get(boolean increment) {
+        return null;
+    }
+
     public void switchStructure() {
         isQueue = !isQueue;
     }

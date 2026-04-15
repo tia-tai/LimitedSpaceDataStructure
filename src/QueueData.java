@@ -5,7 +5,7 @@ public class QueueData implements LimitedSpaceDataStructure{
     int size = 0;
 
     @Override
-    public boolean put(Object obj) {
+    public synchronized boolean put(Object obj) {
         if (size == 100) {
             return false;
         }
@@ -28,5 +28,18 @@ public class QueueData implements LimitedSpaceDataStructure{
         size--;
 
         return obj;
+    }
+
+    @Override
+    public synchronized Object get(boolean increment) {
+        if (size == 0) {
+            return null;
+        }
+
+        if (increment) {
+            return get();
+        } else {
+            return objects[objRead-1];
+        }
     }
 }

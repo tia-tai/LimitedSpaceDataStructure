@@ -6,8 +6,12 @@ public class Getter implements Runnable{
     }
 
     public void run() {
-        for (int i = 0; i < 100; i = i + 1) {
-            System.out.println("Next Value: " + sharedqueue.get());
+        for (int i = 0; i < 300; i = i + 1) {
+            Object num = sharedqueue.get();
+            while (num == null) {
+                num = sharedqueue.get(false);
+            }
+            System.out.println("Next Value: " + num);
         }
     }
 }
