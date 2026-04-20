@@ -18,7 +18,7 @@ public class QueueData implements LimitedSpaceDataStructure{
     }
 
     @Override
-    public Object get() {
+    public synchronized Object get() {
         if (size == 0) {
             return null;
         }

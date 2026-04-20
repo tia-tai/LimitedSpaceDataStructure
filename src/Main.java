@@ -5,11 +5,13 @@ public class Main {
         Getter getter  = new Getter(queue);
         Getter getter2  = new Getter(queue);
         Getter getter3  = new Getter(queue);
-        Putter putter = new Putter(queue);
+        Putter putter = new Putter(queue, 500);
+        Putter putter2 = new Putter(queue, 200);
+        Putter putter3 = new Putter(queue, 800);
 
         Thread putterThread = new Thread(putter);
-        Thread putter2Thread =  new Thread(putter);
-        Thread putter3Thread =  new Thread(putter);
+        Thread putter2Thread =  new Thread(putter2);
+        Thread putter3Thread =  new Thread(putter3);
         Thread getterThread = new Thread(getter);
         Thread getter2Thread = new Thread(getter2);
         Thread getter3Thread = new Thread(getter3);
